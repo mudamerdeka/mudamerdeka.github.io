@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { WhatsappIcon, SendIcon } from 'lucide-react';
+import { MessageCircleIcon, SendIcon } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -18,7 +18,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button className="bg-green-500 hover:bg-green-600 text-white" onClick={() => window.open('https://chat.whatsapp.com/invite/example', '_blank')}>
-              <WhatsappIcon className="mr-2 h-4 w-4" /> Join WhatsApp Group
+              <MessageCircleIcon className="mr-2 h-4 w-4" /> Join WhatsApp Group
             </Button>
             <Button className="bg-blue-500 hover:bg-blue-600 text-white" onClick={() => window.open('https://t.me/example', '_blank')}>
               <SendIcon className="mr-2 h-4 w-4" /> Join Telegram Group
