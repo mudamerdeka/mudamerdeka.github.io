@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { MessageCircleIcon, SendIcon } from 'lucide-react';
-import BlogSection from '@/components/BlogSection';
 
 const Index = () => {
   return (
@@ -27,7 +26,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <BlogSection />
     </div>
   );
 };
