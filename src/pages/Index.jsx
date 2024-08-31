@@ -50,15 +50,15 @@ const Index = () => {
         ) : error ? (
           <p>Error loading posts: {error.message}</p>
         ) : (
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {latestPosts.map((post) => (
-              <Card key={post.id} className="flex flex-col h-full">
+              <Card key={post.id} className="flex flex-col">
                 <CardHeader>
-                  <CardTitle className="text-xl text-blue-700">{post.title}</CardTitle>
+                  <CardTitle className="text-2xl text-blue-700">{post.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow flex flex-col">
+                <CardContent className="flex-grow">
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                  <p className="mb-4 text-gray-700 flex-grow">{post.content.substring(0, 100)}...</p>
+                  <p className="mb-4 text-gray-700">{post.content.substring(0, 150)}...</p>
                   <Link to={`/blog/${post.id}`} className="mt-auto">
                     <Button variant="outline" className="w-full">Read More</Button>
                   </Link>
