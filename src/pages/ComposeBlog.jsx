@@ -11,17 +11,17 @@ const ComposeBlog = () => {
     e.preventDefault();
     // Here you would typically send the data to your backend
     console.log({ title, content });
-    alert('Blog post submitted!');
+    alert('Postingan blog telah dikirim!');
     setTitle('');
     setContent('');
   };
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Compose Blog Post</h1>
+      <h1 className="text-2xl font-bold mb-4">Tulis Postingan Blog</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title</label>
+          <label htmlFor="title" className="block text-sm font-medium text-gray-700">Judul</label>
           <Input
             id="title"
             value={title}
@@ -30,7 +30,7 @@ const ComposeBlog = () => {
           />
         </div>
         <div>
-          <label htmlFor="content" className="block text-sm font-medium text-gray-700">Content</label>
+          <label htmlFor="content" className="block text-sm font-medium text-gray-700">Konten</label>
           <Textarea
             id="content"
             value={content}
@@ -39,7 +39,7 @@ const ComposeBlog = () => {
             rows={10}
           />
         </div>
-        <Button type="submit">Submit Post</Button>
+        <Button type="submit">Kirim Postingan</Button>
       </form>
     </div>
   );

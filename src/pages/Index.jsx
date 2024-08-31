@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 const fetchLatestPosts = async () => {
   // This is a mock fetch, replace with actual API call
   return [
-    { id: 1, title: 'Latest Post 1', content: 'This is the latest post content. It provides valuable insights into our recent activities and future plans. Join us in our mission to create positive change!', date: '2024-03-17' },
-    { id: 2, title: 'Latest Post 2', content: 'In this post, we discuss the importance of youth involvement in shaping our society. Learn about upcoming events and how you can contribute to our cause.', date: '2024-03-18' },
+    { id: 1, title: 'Postingan Terbaru 1', content: 'Ini adalah konten postingan terbaru. Memberikan wawasan berharga tentang aktivitas terkini dan rencana masa depan kami. Bergabunglah dalam misi kami untuk menciptakan perubahan positif!', date: '2024-03-17' },
+    { id: 2, title: 'Postingan Terbaru 2', content: 'Dalam postingan ini, kami membahas pentingnya keterlibatan pemuda dalam membentuk masyarakat kita. Pelajari tentang acara mendatang dan bagaimana Anda dapat berkontribusi pada tujuan kami.', date: '2024-03-18' },
   ];
 };
 
@@ -24,31 +24,31 @@ const Index = () => {
       <div className="text-center max-w-3xl px-4 mb-12">
         <h1 className="text-5xl font-bold mb-6 text-blue-800">Pergerakan Muda Merdeka</h1>
         <p className="text-xl text-gray-700 mb-8">
-          Join us in our mission to create a fair, just, and prosperous society for all. 
-          Together, we can make a difference!
+          Bergabunglah dengan kami dalam misi menciptakan masyarakat yang adil, setara, dan sejahtera untuk semua. 
+          Bersama, kita bisa membuat perubahan!
         </p>
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-blue-700">Get Involved!</h2>
+          <h2 className="text-2xl font-semibold text-blue-700">Mari Terlibat!</h2>
           <p className="text-lg text-gray-600 mb-6">
-            Join our chat groups to stay updated and participate in discussions:
+            Bergabunglah dengan grup chat kami untuk tetap mendapatkan informasi terbaru dan berpartisipasi dalam diskusi:
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button className="bg-green-500 hover:bg-green-600 text-white" onClick={() => window.open('https://chat.whatsapp.com/invite/example', '_blank')}>
-              <MessageCircleIcon className="mr-2 h-4 w-4" /> Join WhatsApp Group
+              <MessageCircleIcon className="mr-2 h-4 w-4" /> Gabung Grup WhatsApp
             </Button>
             <Button className="bg-blue-500 hover:bg-blue-600 text-white" onClick={() => window.open('https://t.me/example', '_blank')}>
-              <SendIcon className="mr-2 h-4 w-4" /> Join Telegram Group
+              <SendIcon className="mr-2 h-4 w-4" /> Gabung Grup Telegram
             </Button>
           </div>
         </div>
       </div>
       
       <div className="w-full max-w-4xl px-4">
-        <h2 className="text-3xl font-bold mb-6 text-center">Latest Blog Posts</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">Postingan Blog Terbaru</h2>
         {isLoading ? (
-          <p>Loading latest posts...</p>
+          <p>Memuat postingan terbaru...</p>
         ) : error ? (
-          <p>Error loading posts: {error.message}</p>
+          <p>Terjadi kesalahan saat memuat postingan: {error.message}</p>
         ) : (
           <div className="grid gap-6 md:grid-cols-2">
             {latestPosts.map((post) => (
@@ -60,7 +60,7 @@ const Index = () => {
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                   <p className="mb-4 text-gray-700">{post.content.substring(0, 150)}...</p>
                   <Link to={`/blog/${post.id}`} className="mt-auto">
-                    <Button variant="outline" className="w-full">Read More</Button>
+                    <Button variant="outline" className="w-full">Baca Selengkapnya</Button>
                   </Link>
                 </CardContent>
               </Card>

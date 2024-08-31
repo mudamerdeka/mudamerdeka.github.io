@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const fetchBlogPost = async (id) => {
   // This is a mock fetch, replace with actual API call
   const posts = [
-    { id: 1, title: 'First Post', content: 'This is the first post content...', date: '2024-03-15' },
-    { id: 2, title: 'Second Post', content: 'This is the second post content...', date: '2024-03-16' },
+    { id: 1, title: 'Postingan Pertama', content: 'Ini adalah konten postingan pertama...', date: '2024-03-15' },
+    { id: 2, title: 'Postingan Kedua', content: 'Ini adalah konten postingan kedua...', date: '2024-03-16' },
   ];
   return posts.find(post => post.id === parseInt(id));
 };
@@ -19,9 +19,9 @@ const BlogPost = () => {
     queryFn: () => fetchBlogPost(id),
   });
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>An error occurred: {error.message}</div>;
-  if (!post) return <div>Post not found</div>;
+  if (isLoading) return <div>Memuat...</div>;
+  if (error) return <div>Terjadi kesalahan: {error.message}</div>;
+  if (!post) return <div>Postingan tidak ditemukan</div>;
 
   return (
     <div className="container mx-auto p-4">
