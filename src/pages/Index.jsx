@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50">
       <div className="text-center max-w-3xl px-4">
-        <h1 className="text-5xl font-bold mb-6 text-blue-800">People's Progressive Party</h1>
+        <h1 className="text-5xl font-bold mb-6 text-blue-800">Pergerakan Muda Merdeka</h1>
         <p className="text-xl text-gray-700 mb-8">
           Join us in our mission to create a fair, just, and prosperous society for all. 
           Together, we can make a difference!
