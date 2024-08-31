@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const fetchBlogPosts = async () => {
   // This is a mock fetch, replace with actual API call
@@ -32,7 +33,9 @@ const BlogPosts = () => {
             <CardContent>
               <p className="text-sm text-gray-500 mb-2">{post.date}</p>
               <p className="mb-4">{post.content.substring(0, 100)}...</p>
-              <Button>Read More</Button>
+              <Link to={`/blog/${post.id}`}>
+                <Button>Read More</Button>
+              </Link>
             </CardContent>
           </Card>
         ))}
