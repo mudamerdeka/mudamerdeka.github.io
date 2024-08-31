@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/button";
 import { MessageCircleIcon, SendIcon } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from 'react-router-dom';
 
 const fetchLatestPosts = async () => {
   // This is a mock fetch, replace with actual API call
   return [
-    { id: 1, title: 'Latest Post 1', content: 'This is the latest post content...', date: '2024-03-17' },
-    { id: 2, title: 'Latest Post 2', content: 'This is another latest post content...', date: '2024-03-18' },
+    { id: 1, title: 'Latest Post 1', content: 'This is the latest post content. It provides valuable insights into our recent activities and future plans. Join us in our mission to create positive change!', date: '2024-03-17' },
+    { id: 2, title: 'Latest Post 2', content: 'In this post, we discuss the importance of youth involvement in shaping our society. Learn about upcoming events and how you can contribute to our cause.', date: '2024-03-18' },
   ];
 };
 
@@ -49,16 +50,18 @@ const Index = () => {
         ) : error ? (
           <p>Error loading posts: {error.message}</p>
         ) : (
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {latestPosts.map((post) => (
-              <Card key={post.id}>
+              <Card key={post.id} className="flex flex-col">
                 <CardHeader>
-                  <CardTitle>{post.title}</CardTitle>
+                  <CardTitle className="text-2xl text-blue-700">{post.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                  <p className="mb-4">{post.content.substring(0, 100)}...</p>
-                  <Button variant="outline">Read More</Button>
+                  <p className="mb-4 text-gray-700">{post.content.substring(0, 150)}...</p>
+                  <Link to={`/blog/${post.id}`} className="mt-auto">
+                    <Button variant="outline" className="w-full">Read More</Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
