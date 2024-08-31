@@ -19,6 +19,7 @@ const BlogSection = () => {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching blog posts</div>;
+  if (!posts || posts.length === 0) return <div>No blog posts available</div>;
 
   return (
     <div className="mt-12 mb-8">
