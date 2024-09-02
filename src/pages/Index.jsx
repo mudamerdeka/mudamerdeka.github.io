@@ -39,10 +39,10 @@ const Index = () => {
             Bergabunglah dengan grup chat kami untuk tetap mendapatkan informasi terbaru dan berpartisipasi dalam diskusi:
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button className="bg-green-500 hover:bg-green-600 text-white" onClick={() => window.open('https://chat.whatsapp.com/invite/example', '_blank')}>
+            <Button className="bg-green-500 hover:bg-green-600 text-white" onClick={() => window.open('https://chat.whatsapp.com/JKdQx1G7jiV0Q69QvCJ5Q3', '_blank')}>
               <MessageCircleIcon className="mr-2 h-4 w-4" /> Gabung Grup WhatsApp
             </Button>
-            <Button className="bg-blue-500 hover:bg-blue-600 text-white" onClick={() => window.open('https://t.me/example', '_blank')}>
+            <Button className="bg-blue-500 hover:bg-blue-600 text-white" onClick={() => window.open('https://t.me/+hUIkQdnsJSU5ODFh', '_blank')}>
               <SendIcon className="mr-2 h-4 w-4" /> Gabung Grup Telegram
             </Button>
           </div>
