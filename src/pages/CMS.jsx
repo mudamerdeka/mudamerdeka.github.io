@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const CMS = () => {
-  useEffect(() => {
-    // Redirect to the Decap CMS admin page
-    window.location.href = '/admin/index.html';
-  }, []);
-
   return (
-    <div>Redirecting to CMS...</div>
+    <div style={{ width: '100%', height: '100vh' }}>
+      <iframe
+        src="/admin/index.html"
+        style={{ width: '100%', height: '100%', border: 'none' }}
+        title="Decap CMS"
+      />
+    </div>
   );
 };
 
