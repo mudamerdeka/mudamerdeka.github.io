@@ -1,7 +1,6 @@
 import { HomeIcon, PenIcon, BookOpenIcon, SettingsIcon, GraduationCapIcon, HeartHandshakeIcon, ScaleIcon } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import BlogPosts from "./pages/BlogPosts.jsx";
-import { SettingsIcon } from "lucide-react";
 import CMS from "./pages/CMS.jsx";
 
 /**
