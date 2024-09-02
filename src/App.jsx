@@ -16,7 +16,7 @@ const App = () => (
       <BrowserRouter>
         <div className="flex flex-col min-h-screen">
           <Navigation />
-          <main className="flex-grow">
+          <main className="flex-grow pt-16"> {/* Added padding-top here */}
             <Routes>
               {navItems.map(({ to, page }) => (
                 <Route key={to} path={to} element={page} />
