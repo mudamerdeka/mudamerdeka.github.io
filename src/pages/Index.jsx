@@ -13,6 +13,12 @@ const fetchLatestPosts = async () => {
   ];
 };
 
+const features = [
+  { id: 1, title: 'Pendidikan Politik', description: 'Program pendidikan politik untuk pemuda', link: '/fitur/pendidikan-politik' },
+  { id: 2, title: 'Aksi Sosial', description: 'Inisiatif aksi sosial untuk masyarakat', link: '/fitur/aksi-sosial' },
+  { id: 3, title: 'Advokasi Kebijakan', description: 'Program advokasi kebijakan publik', link: '/fitur/advokasi-kebijakan' },
+];
+
 const Index = () => {
   const { data: latestPosts, isLoading, error } = useQuery({
     queryKey: ['latestPosts'],
@@ -43,6 +49,24 @@ const Index = () => {
         </div>
       </div>
       
+      <div className="w-full max-w-4xl px-4 mb-12">
+        <h2 className="text-3xl font-bold mb-6 text-center">Fitur Utama Kami</h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          {features.map((feature) => (
+            <Link to={feature.link} key={feature.id}>
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-xl text-blue-700">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div className="w-full max-w-4xl px-4">
         <h2 className="text-3xl font-bold mb-6 text-center">Postingan Blog Terbaru</h2>
         {isLoading ? (
