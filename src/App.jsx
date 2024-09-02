@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import PendidikanPolitik from "./pages/PendidikanPolitik";
 import AksiSosial from "./pages/AksiSosial";
 import AdvokasiKebijakan from "./pages/AdvokasiKebijakan";
+import CMS from "./pages/CMS";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="/fitur/pendidikan-politik" element={<PendidikanPolitik />} />
               <Route path="/fitur/aksi-sosial" element={<AksiSosial />} />
               <Route path="/fitur/advokasi-kebijakan" element={<AdvokasiKebijakan />} />
+              <Route path="/admin" element={<CMS />} />
             </Routes>
           </main>
           <Footer />
