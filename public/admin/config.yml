@@ -2,6 +2,7 @@ backend:
   name: github
   repo: mudamerdeka/mudamerdeka.github.io
   branch: main
+  base_url: https://api.netlify.com
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
